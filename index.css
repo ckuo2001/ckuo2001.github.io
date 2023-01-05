@@ -30,3 +30,8 @@ body {
   margin-top: 5rem;
   margin: auto;
 }
+
+.nav {
+  margin: 25px;
+  font-size: large;
+}
