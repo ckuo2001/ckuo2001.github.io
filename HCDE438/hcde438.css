@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.recipe-container {
+  width: 80%;
+  padding-top: 100px;
+  margin-top: 5rem;
+  margin: auto;
+}
+
+.nav {
+  width: 80%;
+  margin: auto;
+  font-size: large;
+}
+
+.navbar {
+  justify-content: center;
+}
+
+.hcde438-picture {
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}

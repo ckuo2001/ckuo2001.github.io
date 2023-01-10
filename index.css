@@ -1,5 +1,5 @@
 .picture {
-  width: 300px;
+  width: 200px;
   border: 1px solid white;
   border-radius: 10px;
   cursor: pointer;
@@ -27,11 +27,34 @@ body {
 
 .page-container {
   width: 80%;
+  padding-top: 100px;
   margin-top: 5rem;
   margin: auto;
 }
 
 .nav {
-  margin: 25px;
+  width: 80%;
+  margin: auto;
   font-size: large;
+}
+
+.navbar {
+  justify-content: center;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  justify-content: center;
+}
+
+.projects {
+  padding: 30px;
+}
+
+.about {
+  padding: 50px;
 }

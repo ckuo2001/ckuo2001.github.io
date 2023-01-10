@@ -8,40 +8,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="bio/bio.html">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="recipe/recipe.html">Projects</a>
-      </li>
-    </ul>
+    <nav class="navbar navbar-light bg-light">
+      <h1><a class="navbar-brand" href="#">Christina's Portfolio</a></h1>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link disabled">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bio/bio.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="HCDE438/hcde438.html">HCDE 438</a>
+        </li>
+      </ul>
+    </nav>
 
     <div class="page-container">
-      <h1 class="header">Christina's portfolio page!</h1>
-      <p>This is where I am documenting my work for HCDE 438</p>
-
-      <h2>About</h2>
-      <div class="picture-container">
-        <a href="./bio/bio.html">
-          <img
-            class="picture"
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Goblin_illustration_from_19th_century.jpg"
-          />
-        </a>
-      </div>
-      <h2>Projects</h2>
-      <div class="picture-container">
-        <a href="./recipe/recipe.html">
-          <img
-            class="picture"
-            src="https://picky-palate.com/wp-content/uploads/2010/08/BlueberryOatmealCookie2.jpg"
-          />
-        </a>
-      </div>
+      <div class="main-content">
+        <div>
+          <a href="bio/bio.html"><img
+          class="picture about"
+          src="imgs/about-pic.png"
+          /></a>
+          <h2 class="title">About</h2>
+        </div>
+        <div>
+          <a class="disabled" href="#"><img
+          class="picture projects"
+          src="imgs/projects-pic.png"
+          /></a>
+          <h2 class="title">Projects</h2>
+        </div>
+        <div>
+          <a href="HCDE438/hcde438.html"><img
+          class="picture"
+          src="imgs/HCDE438-pic.png"
+          /></a>
+          <h2 class="title">HCDE 438</h2>
+        </div>
     </div>
   </body>
 </html>

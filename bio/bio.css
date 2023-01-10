@@ -6,11 +6,10 @@
 }
 
 .bio-container {
-  display: flex;
   width: 80%;
-  margin: auto;
+  padding-top: 100px;
   margin-top: 5rem;
-  gap: 12px;
+  margin: auto;
 }
 
 body {
@@ -20,6 +19,16 @@ body {
 }
 
 .nav {
-  margin: 25px;
+  width: 80%;
+  margin: auto;
   font-size: large;
+}
+
+.navbar {
+  justify-content: center;
+}
+
+h1 {
+  justify-content: center;
+  font-size: 2.5rem;
 }
