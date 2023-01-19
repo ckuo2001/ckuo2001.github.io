@@ -1,3 +1,9 @@
+body {
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  color: black;
+}
+
 .picture {
   width: 200px;
   border: 1px solid white;
@@ -19,12 +25,6 @@
   gap: 12px;
 }
 
-body {
-  background-color: white;
-  font-family: 'Karla', sans-serif;
-  color: black;
-}
-
 .page-container {
   width: 80%;
   padding-top: 100px;
@@ -42,6 +42,14 @@ body {
   justify-content: center;
 }
 
+.navbar-brand {
+  margin-right: 0rem;
+}
+
+ul.nav {
+  margin: 0;
+}
+
 .main-content {
   display: flex;
   justify-content: space-around;
@@ -57,4 +65,12 @@ h1 {
 
 .about {
   padding: 50px;
+}
+
+.cheatsheet {
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
 }

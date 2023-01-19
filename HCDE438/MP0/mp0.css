@@ -1,21 +1,14 @@
-.picture {
-  width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-
-.bio-container {
-  width: 80%;
-  padding-top: 100px;
-  margin-top: 5rem;
-  margin: auto;
-}
-
 body {
   background-color: white;
   font-family: 'Karla', sans-serif;
   color: black;
+}
+
+.page-container {
+  width: 80%;
+  padding-top: 100px;
+  margin-top: 5rem;
+  margin: auto;
 }
 
 .nav {
@@ -39,4 +32,12 @@ ul.nav {
 h1 {
   justify-content: center;
   font-size: 2.5rem;
+}
+
+.hcde438-picture {
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
 }
