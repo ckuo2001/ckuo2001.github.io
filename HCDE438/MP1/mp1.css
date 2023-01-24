@@ -4,10 +4,25 @@ body {
   color: black;
 }
 
+.page-container {
+  width: 80%;
+  padding-top: 100px;
+  margin-top: 5rem;
+  margin: auto;
+}
+
 .nav {
   width: 80%;
   margin: auto;
   font-size: large;
+}
+
+.navbar-brand {
+  margin-right: 0rem;
+}
+
+ul.nav {
+  margin: 0;
 }
 
 .navbar {
@@ -16,13 +31,7 @@ body {
 
 h1 {
   justify-content: center;
-}
-
-.page-container {
-  width: 80%;
-  padding-top: 100px;
-  margin-top: 5rem;
-  margin: auto;
+  font-size: 2.5rem;
 }
 
 .hcde438-picture {
