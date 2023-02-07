@@ -17,7 +17,7 @@
           <a class="nav-link" href="../../bio/bio.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="../hcde438.html">HCDE438 Writeup</a>
+          <a class="nav-link" href="../hcde438.html">HCDE438 Writeup</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../cheatsheet.html">Cheatsheet</a>
@@ -30,7 +30,7 @@
       <div>
         <h3>Overview and Usage</h3>
         <p><a href="./gallery/gallery.html">Link to the gallery</a></p>
-        <p>In this assignment, I made a gallery of artworks made by P5.js library. There are six kinds of artworks, and each of them utilized different functions in the P5.js library.</p>
+        <p>In this assignment, I made a gallery of artworks made by the P5.js library. There are six kinds of artworks, and each of them utilized different functions in the P5.js library.</p>
         <p>
           The six artworks are:
           <ul>
@@ -42,81 +42,92 @@
             <li>Audio and Visuals</li>
           </ul>
         </p>
-        <img class="hcde438-picture" alt="picture of the gallery">
+        <img class="hcde438-picture" src="./imgs/gallery.png" alt="picture of the gallery">
       </div>
 
       <div>
         <h3>Development Process</h3>
         <ul>
           <ol>
-            <h4>Design</h4>
+            <h4>Part 1: Static</h4>
             <p>
-              To start this project, I first looked up some example extensions in the Chrome Web Store and the Chrome Extensions API. I also took my interest into account. I always thought about having a timer on my browser extension would be useful, especially a timer that could set a date and time. Combining everything I found online and my idea, I decided to make a timer.
+              I started by making the first part of this assignment -- static artwork. I first searched online and looked into the P5.js Reference to find some examples as my inspirations. The shapes in the P5.js Reference Page reminded me of a HCDE sticker design. So, I decided to use shapes to make an easy version of the sticker.
             </p>
-            <p>
-              Next, I started to make a user flow to better understand the process of using my extension and design the appearance of the extension on the popup page.            </p>
-            <img class="hcde438-picture" src="imgs/User-flow.png">
-            <img class="hcde438-picture" src="imgs/Design.png">
+            <img class="hcde438-picture" src="./imgs/static.png">
           </ol>
           <ol>
-            <h4>Basic HTML bones</h4>
+            <h4>Part 2: Random</h4>
             <p>
-              Next is the coding part. I started with HTML since it helped with visualizing the extension. Comparing Javascript, I am more familiar with HTML and CSS. This is also why I started with HTML and CSS.
+              Next is the second part -- random artwork. I got my inspiration from my laptop which had many stickers on it. So, I decided to make an artwork that generated random "stickers" (rectangles) on a laptop.
             </p>
-            <p>
-              However, this assignment was pretty challenging for me since I had never created an extension before. Because of my lack of experience, I looked up more examples and got a better understanding of coding the pop-up page for a chrome extension. For example, I googled how to make a calendar view that allowed people to choose dates and times online. I found a tag called input in HTML that auto-generated a calendar view for me, which was pretty useful for me.
-            </p>
-            <img class="hcde438-picture" src="imgs/date-time.png">
-            <p>The following image is when I first put the calendar view in my code successfully.</p>
-            <img class="hcde438-picture" src="imgs/calendar-view.png">
-            <p>Another source that I found was pretty helpful was the code for a progress bar. It was a video teaching people how to make a circular progress bar in HTML, CSS, and Javascript.</p>
-            <img class="hcde438-picture" src="imgs/progress-bar.png">
-            <p>Because of these online tools and resources, I was able to reduce the time spent on HTML and CSS.</p>
+            <img class="hcde438-picture" src="./imgs/random.png">
           </ol>
           <ol>
-            <h4>Javascript</h4>
+            <h4>Part 3: Infinity</h4>
             <p>
-              After HTML and CSS, it was the most difficult part -- Javascript. Javascript was pretty challenging. Although I took CSE 154 Web Development before, I was still confused. To make the process easier, I went online to read a lot of articles and watched many videos about setting a timer in Javascript. For example, I found a method that could make a timer and countdown the remaining time for me automatically -- setInterval, which made my process of building an extension went so smoothly and fast.
+              For my third artwork, Infinity, I decided to make a circle that moved in an infinity sign shape consistently. This idea is inspired by the name of this part. I also found some useful examples online while working on this part. These resources helped me a lot in figuring out the math equation for the infinity sign.
             </p>
-            <img class="hcde438-picture" src="imgs/setInterval.png">
+            <p>Math equation for a infinity sign: (cost, sintcost) -pi/2 <= t <= 3pi/2</p>
+            <img class="hcde438-picture" src="./imgs/infinity.gif">
+          </ol>
+          <ol>
+            <h4>Part 4: Interative</h4>
             <p>
-
+              Next is the interactive part. My inspiration for this part originated from the P5.js Reference and Library. There were many examples of music. Plus, I am really interested in making something related to music on a computer. So, I thought it would be interesting if the artwork showed the music note based on the user's input.
             </p>
+            <img class="hcde438-picture" src="./imgs/interactive.gif">
+          </ol>
+          <ol>
+            <h4>Part 5: Audio</h4>
+            <p>
+              After making the interactive part, I wanted to work on playing the sound of the music note based on the user input. So, I used the Oscillator object to play the sound of the note the user inputted.
+              The Oscillator required the frequency of the music note as a parameter, so I searched for the frequency of each note by using <a href="https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies">this website</a> and added it in the code.
+            </p>
+            <img class="hcde438-picture" src="./imgs/audio-in-progress.png">
+            <img class="hcde438-picture" src="./imgs/audio.gif">
+          </ol>
+          <ol>
+            <h4>Part 6: Audio + Visuals</h4>
+            <p>
+              The final part of this assignment was to combine audio and visuals based on the user input. This was pretty challenging for me since the coding process was long and required a lot of planning before I actually started to code. I decided to make a digital piano that took user input and played the musical note with some visuals. Before starting coding, I sketched out what I imagined in my mind. This step helped me to break down the process and reduced the workload in my mind.
+            </p>
+            <img class="hcde438-picture" src="./imgs/piano-sketch.png">
+            <p>
+              My idea for this artwork was that the user could type on their computer keyboard to play the digital piano. While the user was playing it, the rectangle located above the piano would move up every time the user hit the corresponding key.
+            </p>
+            <p>
+              After sketching, I started to work on the code. First, I made the piano on the canvas. Next, I put the name of the notes on the piano. Having the visuals, I then used what I did for part 5 for the audio output. So when the user typed the key A on their keyboard, a C music note would be output. And finally, I added a variable that kept the number of times the key was hit. The rectangle above the key would move up when the user pressed the key.
+            </p>
+            <img class="hcde438-picture" src="./imgs/audio-visuals.gif">
           </ol>
         </ul>
       </div>
 
       <div>
-        <h3>Issue: Syntax + Logic Error on Chrome Extensions API</h3>
+        <h3>Logic Error: Oscillator Audio</h3>
+        <p>While making Oscillator in part 5, I ran into some issues with the sound quality. When I pressed a key on my keyboard, the audio output was pretty bad. It had two sounds: the musical note based on the user input sound and low-frequency noise. Although it outputted the correct note, I did not satisfy with the low-frequency noise.</p>
         <p>
-          I had some trouble understanding the Chrome Extensions API. Especially the part where I connect popup.js and background.js. I kept running into errors that told me undefined or the endpoint did not exist.
-        </p>
-        <p>
-          The way I fixed this was utilizing online resources such as StackOverflow. I found that many people had the same problem as me. So I dug into every search result on Google and tried the methods people recommended. Trying different ways and spending a lot of time on it, I finally understood how chrome.runtime.connect worked and found the code that worked for me. (I found the following image pretty useful for me to understand how each script in the extension communicated with the other)
-        </p>
-        <img class="hcde438-picture" src="imgs/messaging.png">
-        <p>
-          I am glad that many people also had the same issue as me on StackOverflow. Because of StackOverflow, I was able to figure out how chrome extensions worked and build this extension by myself.
+          To solve this problem, I searched online for many examples to figure out what caused this problem. I realized that I put osc.start() in the setup() function, which was the reason why the noise was coming out.
+          So, I moved the osc.start() to another function to trigger it after the key was pressed.
         </p>
       </div>
 
       <div>
         <h3>Ideas and Future</h3>
         <p>
-          Some idea that I think would be cool and special is allowing people to save the timers in the extension. I am not sure how that will work and how to code it out now, but I will try to work on it in my free time to explore more Chrome Extensions API and Javascript.
-        </p>
+          An idea that I think would be cool and special is making some more animation on my sixth artwork. It would be cool if the rectangles' lengths could be different based on the time length of the user's input.         </p>
       </div>
 
       <div>
         <h3>Kudos</h3>
         <p>
-          Youtube Channel: <a href="https://www.youtube.com/@CodingLabYT">CodingLab</a>
+          MIDI note numbers and center frequencies: <a href="https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies">Link</a>
         </p>
         <p>
-          Chrome Extensions API: <a href="https://developer.chrome.com/docs/extensions/mv3/messaging/#connect">Port</a>
+          The Coding Train: <a href="https://thecodingtrain.com/tracks/code-programming-with-p5-js">Link</a>
         </p>
         <p>
-          Inspiration:<a href="https://chrome.google.com/webstore/detail/forest-stay-focused-be-pr/kjacjjdnoddnpbbcjilcajfhhbdhkpgk">Forest: stay focus, be present</a>
+          Infinite Loop:<a href="https://openprocessing.org/sketch/1026496">Link</a>
         </p>
       </div>
 
