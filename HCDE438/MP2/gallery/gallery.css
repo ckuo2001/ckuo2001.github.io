@@ -1,0 +1,67 @@
+body {
+  background-color: white;
+  font-family: 'Karla', sans-serif;
+  color: black;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nav {
+  width: 80%;
+  margin: auto;
+  font-size: large;
+}
+
+.navbar {
+  justify-content: center;
+}
+
+h1 {
+  justify-content: center;
+}
+
+.page-container {
+  width: 80%;
+  padding-top: 100px;
+  margin-top: 5rem;
+  margin: auto;
+}
+
+.hcde438-picture {
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.picture {
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.picture:hover {
+  filter: brightness(80%);
+}
+
+.picture-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  gap: 12px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

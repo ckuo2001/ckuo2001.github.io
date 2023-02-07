@@ -74,3 +74,9 @@ h1 {
 h2 {
   text-align: center;
 }
+
+#writeup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
