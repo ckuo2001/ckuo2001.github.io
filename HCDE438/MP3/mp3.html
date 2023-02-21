@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./mp3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <h1><a class="navbar-brand" href="../../index.html">Christina's Portfolio</a></h1>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../bio/bio.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../hcde438.html">HCDE438 Writeup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../cheatsheet.html">Cheatsheet</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-container">
+      <h2>MP3 Writeup</h2>
+      <div>
+        <h3>Overview and Usage</h3>
+        <p><a href="https://ckuo2001.github.io/game/">Link to the game</a></p>
+        <p>
+          In this assignment, I made a game using the P5.js, P5.sound, and P5.play libraries.
+          This is a game where the user needs to move their mouse to collect plastic bottles within the time limit to win the game.
+          The recycle bin will follow the user's mouse. When the user hovers over a plastic bottle, the bottle will be collected by the bin.
+          If the user finishes collecting all the bottles in the time constraint, the screen will show WIN. Otherwise, it will show LOSE.
+          Other than the game, there is a button that the user can use it to turn on or off the music.
+          There is also a restart button provided for the user to start the game from the beginning again.
+        </p>
+        <img class="hcde438-picture" src="./imgs/game.png" alt="picture of the game">
+      </div>
+
+      <div>
+        <h3>Development Process</h3>
+        <ul>
+          <ol>
+            <h4>Part 1: Planning</h4>
+            <p>
+              I started by planning the overall logistics of the game.
+              I first looked up the P5.play library to get some inspiration and to understand what features and functions are included in the library.
+            </p>
+            <img class="hcde438-picture" src="./imgs/inspo.gif">
+          </ol>
+          <ol>
+            <h4>Part 2: Coding - HTML</h4>
+            <p>
+              Next, I started to code out the game. I used the in-class activity as a reference for installing all the required development tools.
+              However, installing P5 with NPM was challenging. The problem I ran through was that my P5 canvas did not show up when I run my code.
+              And as the requirement of using NPM to install P5 was changed, I switched to installing P5 by CDN.
+              By switching the method for installation, my P5 canvas finally showed up by running <code>npm run start</code>.
+            </p>
+            <img class="hcde438-picture" src="./imgs/htmlCode.png">
+          </ol>
+          <ol>
+            <h4>Part 3: Coding - Sprite / Group</h4>
+            <p>
+              After making sure the libraries are working in my code, I started to code the game one step at a time.
+              I started by making Sprite and Group for my game. The Sprite is for my recycle bin and the Group is for the plastic bottles.
+              I found writing out the code by hand was easier than typing it out directly on my laptop.
+              I think it is because I got more time to think while writing. The time to write things down gave my brain some more time to think deeper, so my code happened to have fewer errors.
+            </p>
+            <img class="hcde438-picture" src="./imgs/code.jpg">
+          </ol>
+          <ol>
+            <h4>Part 4: Coding - Overlap</h4>
+            <p>
+              After making the "characters" for the game, the next is to set up the functionality of overlapping.
+              When the bin overlaps with the bottle, the bottle should be removed from the screen.
+              This can be done by the overlap function in p5.play.
+            </p>
+            <img class="hcde438-picture" src="./imgs/overlap.png">
+          </ol>
+          <ol>
+            <h4>Part 5: Coding - Timer</h4>
+            <p>
+              The timer is an essential part of this game. The timer should present the remaining time on the screen.
+              The first version of the code I wrote for the timer was:
+              <code>if (timer > 0) { timer--; }</code>
+              However, this did not work because of p5's functionality. So, I searched stackoverflow and found some people had the same issue.
+              And here is the solution I found:
+              <code>if (frameCount % 60 == 0 && timer > 0) { timer--; }</code>
+              In p5, the timer should be built based on the number of frames in order to count the time down.
+            </p>
+          </ol>
+          <ol>
+            <h4>Part 6: Coding - Result</h4>
+            <p>
+              To show the result of the game, I first made a <code>result()</code> function that contained all the code for showing the result.
+              The function had two parts, <code>timer == 0</code> and <code>timer > 0</code>.
+              When <code>timer == 0</code>, the function checked if there was any plastic bottle left. If yes, the result would be LOSE. Otherwise, WIN would be shown.
+              When <code>timer > 0</code>, the function would only check if all the plastic bottles were cleaned up. If yes, the screen would show WIN.
+            </p>
+            <p>
+              After testing the game for a while, I realized that this function could be combined with the function counting down the timer by adding a variable called <code>inGame</code>.
+              <code>inGame</code> held a boolean value that indicated if the game was still going.
+              If <code>true</code>, the program would check if all bottles were collected and give out WIN if no bottles were left.
+              If <code>false</code>, the program would show WIN or LOSE based on the bottles' amount.
+            </p>
+            <img class="hcde438-picture" src="./imgs/result.png">
+          </ol>
+          <ol>
+            <h4>Part 7: Coding - Restart</h4>
+            <p>
+              Having the game running, I then started working on the restart button. I hoped the button could remove all plastic bottles and reset the timer.
+              To do this, I made a function called newGame, which included all the objects to reset.
+              This function was not challenging since it was pretty similar to the <code>setup()</code> function.
+            </p>
+            <img class="hcde438-picture" src="./imgs/newGame.png">
+          </ol>
+          <ol>
+            <h4>Part 8: Coding - Music</h4>
+            <p>
+              The final step was to add music to the game. I first downloaded an open-source music file and added it to the game's folder.
+              Next, I made a button for the user to turn the music on or off.
+              The code behind the button contained the functions <code>.play()</code> and <code>.stop()</code>.
+              My idea for this button was that when the music was playing, the button would be able to stop the music by being clicked.
+              On the other hand, it would start playing the music if the music was not played and the button was clicked.
+              To reach my goal, I used <code>.isPlaying()</code> to check if the music was playing, and set the function of the button based on the value given by <code>.isPlaying()</code>.
+            </p>
+            <img class="hcde438-picture" src="./imgs/music.png">
+          </ol>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Logic Error: Music</h3>
+        <p>
+          While I was inputting the music for the game, I ran into an issue that the music kept repeating again and again.
+        </p>
+        <p>
+          To solve this problem, I searched online for many examples using stackoverflow and the p5 reference page.
+          I realized that the function <code>.play()</code> should not be inside the <code>draw()</code> function.
+          Since <code>draw()</code> will be running again and again, the music started over every time the <code>draw()</code> function was called.
+          So, I moved the <code>.play()</code> to another function to trigger it after the music button was pressed.
+        </p>
+      </div>
+
+      <div>
+        <h3>Ideas and Future</h3>
+        <p>
+          An idea that I think would be cool is adding levels with different difficulties.
+          When the user completes one level, they will be able to enter next level.
+          The difficulty of the level can be based on the number of the bottles on the screen.
+        </p>
+      </div>
+
+      <div>
+        <h3>Kudos</h3>
+        <p>
+          Learn how to make a Sprite in p5: <a href="https://p5play.org/learn/sprite.html">Link</a>
+        </p>
+        <p>
+          Following the mouse: <a href="https://p5play.org/learn/sprite.html?page=12">Link</a>
+        </p>
+        <p>
+          Learn how to make a Group in p5:<a href="https://p5play.org/learn/group.html">Link</a>
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>
