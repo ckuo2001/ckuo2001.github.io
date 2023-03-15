@@ -53,6 +53,7 @@ ul.nav {
 .main-content {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 h1 {
