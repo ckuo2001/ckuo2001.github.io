@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./FP0.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <h1><a class="navbar-brand" href="../../index.html">Christina's Portfolio</a></h1>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../bio/bio.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../hcde438.html">HCDE438 Writeup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../cheatsheet.html">Cheatsheet</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-container">
+      <h2>Final Project - Food Blog</h2>
+      <p><a href="https://ckuo2001.github.io/final-project/">Click to see the website</a></p>
+      <div>
+        <h3>Overview and Usage</h3>
+        <p>
+          This project is a recipe platform that contains many recipes. It also allows people to upload or input their own recipes onto the website.</p>
+        <p>
+          The main page/landing page will be my introduction.
+          All the recipes will be shown in a table view on another page.
+          By clicking on the individual block, the user will be taken to the individual recipe page that contains the steps to make the dish.
+          The Upload page allows people to upload their own recipes to the website.
+        </p>
+      </div>
+
+      <div>
+        <h3>Development Process</h3>
+        <h4>Design</h4>
+        <p>
+          To start the project, I first drew out some outlines of the website, and wrote out how the data would be stored and retrieved.
+        </p>
+        <h4>Firebase</h4>
+        <p>
+          I decided to use Firebase to store my data. The most difficult part of Firebase was figuring out the structure. I tried to structure the database in many ways and formats. For example, I created a collection for each recipe at first. However, it was challenging to get all the collections. So the current structure of the database is that all recipes are in one collection.
+        </p>
+        <p>
+          I also struggled with the data type a lot while developing the website. I was debating whether I should use arrays to pass the data or maps. After a few tries, I decided to use a map with an array for storing the recipes.
+        </p>
+        <h4>Javascript</h4>
+        <p>
+          Having a better understanding of Firebase, I started to code the basic design of the website and its functionality.
+        </p>
+        <img class="hcde438-picture" src="img/all-recipes-undone.png">
+        <p>
+          A new difficulty that I ran into was that the variables were not stored after navigating to the other page. Because of this, I kept running into the issue that the variable was null. However, I solved this problem in a short time by searching online. I found that this problem could be solved by using local storage.
+        </p>
+        <img class="hcde438-picture" src="img/localStorage.png">
+        <img class="hcde438-picture" src="img/setItem.png">
+        <h4>Deployment</h4>
+        <p>
+          After making sure I could pass the data into Firebase and retrieve the data from it, I started working on deployment. This was also one of the challenging parts of the whole process. I spent some time figuring out how vite configuration worked.
+        </p>
+        <h4>Visual</h4>
+        <p>
+          The final step of the project was working on the appearance of the website.
+        </p>
+        <img class="hcde438-picture" src="img/recipe.gif">
+        <img class="hcde438-picture" src="img/upload.gif">
+      </div>
+
+      <div>
+        <h3>Issue Deep-dive</h3>
+        <h4>Configuration</h4>
+        <p>
+          The biggest issue of this project was the data type. Although Firebase accepts Map data type to be passed in, it did not allow the Map to be passed in directly.
+        </p>
+        <p>
+          The way to solve this problem was to convert the Map into an Object, which I was not familiar with. I spent time reading the development document from Firebase’s official website and also searching for the same issue on StackOverflow. After a long search, I finally found someone the solution and convert the Map into an Object successfully.
+        </p>
+        <img class="hcde438-picture" src="img/vite-config.png">
+      </div>
+
+      <div>
+        <h3>Ideas and Future Work</h3>
+        <ol>
+          <li>Add animations</li>
+          <li>Make it look better</li>
+          <li>Allow people to edit the recipes they submitted</li>
+        </ol>
+      </div>
+
+      <div>
+        <h3>Kudos</h3>
+        <ol>
+          <li><a href="https://youtube.com/playlist?list=PL4cUxeGkcC9jERUGvbudErNCeSZHWUVlb">Firebase Tutorials</a></li>
+          <li><a href="https://firebase.google.com/docs">Firebase Doc</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">MDN Object Document</a></li>
+          <li><a href="https://vitejs.dev/config/">Vite Config</a></li>
+        </ol>
+      </div>
+
+    </div>
+  </body>
+</html>
